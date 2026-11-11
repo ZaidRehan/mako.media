@@ -1,0 +1,63 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	background: #000;
+}
+
+#stage, #stage > * {
+	position: absolute;
+	inset: 0;
+}
+
+#stage video,
+#stage iframe,
+#stage mediaelementwrapper,
+#stage mediaelementwrapper > iframe,
+#stage mediaelementwrapper > video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw !important;
+	height: 100vh !important;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	object-fit: contain;
+	background: #000;
+}
+
+#vis {
+	position: absolute;
+	inset: 0;
+	width: 100vw;
+	height: 100vh;
+	display: none;
+	background: #000;
+	z-index: 5;
+}
+
+body.vis #vis {
+	display: block;
+}
+
+#loading {
+	position: absolute;
+	inset: 0;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	z-index: 10;
+	background: #000;
+}
+
+#loading img {
+	width: 18vh;
+	height: 18vh;
+}
+
+body.loading #loading {
+	display: flex;
+}
